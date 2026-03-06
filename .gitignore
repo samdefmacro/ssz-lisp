@@ -1,0 +1,17 @@
+# Reference projects (fetch with: ./scripts/fetch-refs.sh)
+/refs/
+
+# Generated test data (regenerate with: python scripts/extract-spec-tests.py)
+test/spec-test-data.json
+
+# External test data symlink lives in refs/ now
+# (download from: https://github.com/ethereum/consensus-spec-tests)
+
+# Python virtual environment
+.venv/
+
+# Common Lisp build artifacts
+*.fasl
+*.fas
+*.lib
+*.o
