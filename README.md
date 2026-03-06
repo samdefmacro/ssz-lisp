@@ -69,7 +69,7 @@ All examples assume the following preamble:
 ```lisp
 (coalton-toplevel
   ;; U128: 16 bytes
-  (define my-u128 (ssz:u128-make 0 1))  ; high=0, low=1
+  (define my-u128 (ssz:u128-make 0 1))  ; low=0, high=1
   (define u128-bytes (ssz:serialize-u128 my-u128))
 
   ;; U256: 32 bytes (used for hashes, public keys, etc.)
