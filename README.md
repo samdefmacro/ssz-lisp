@@ -216,12 +216,12 @@ All examples assume the following preamble:
   ;; Deserialize container
   (define (deserialize-simple bytes)
     (match (ssz:deserialize-container
-             (make-list (Tuple "a" 4) (Tuple "b" 1))  ; field specs
+             (make-list (ssz:FixedField 4) (ssz:FixedField 1))  ; field specs
              bytes)
       ((Ok fields)
-       ;; Extract fields by name
-       (match (Tuple (ssz:get-field "a" fields)
-                     (ssz:get-field "b" fields))
+       ;; Extract fields by index
+       (match (Tuple (ssz:get-field 0 fields)
+                     (ssz:get-field 1 fields))
          ((Tuple (Some a-bytes) (Some b-bytes))
           (match (Tuple (ssz:deserialize-u32 a-bytes)
                         (ssz:deserialize-bool b-bytes))

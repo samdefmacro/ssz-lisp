@@ -10,7 +10,7 @@ SSZ-Lisp is a complete implementation of Ethereum's SSZ (Simple Serialize) forma
 # Load the library
 sbcl --eval '(ql:quickload "ssz")'
 
-# Run unit tests (161 tests)
+# Run unit tests (181 tests)
 sbcl --eval '(ql:quickload "ssz/tests")' --eval '(ssz-tests/runner:run-tests)'
 
 # Run spec tests (1,760 tests)

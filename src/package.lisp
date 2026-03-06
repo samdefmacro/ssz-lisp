@@ -66,8 +66,6 @@
    ;; U256 and U128 types
    #:U256
    #:U128
-   #:u256-from-bytes
-   #:u128-from-bytes
 
    ;; Merkleization
    #:Chunk
@@ -76,7 +74,6 @@
    #:mix-in-selector
    #:pack
    #:sha256
-   #:chunk-count
    #:zero-chunk
    #:zero-hash
    #:hash-concat
@@ -86,7 +83,6 @@
    #:ssz-vector-elements
    #:ssz-vector-length
    #:ssz-vector-ref
-   #:ssz-vector-from-vec
    #:ssz-vector-from-list
    #:deserialize-vector-fixed
    #:deserialize-vector-variable
@@ -96,7 +92,6 @@
    #:ssz-list-elements
    #:ssz-list-length
    #:ssz-list-ref
-   #:ssz-list-from-vec
    #:ssz-list-from-list
    #:deserialize-list-fixed
    #:deserialize-list-variable
@@ -159,12 +154,9 @@
    #:u128-make
    #:u128-word
    #:u128-zero
-   #:zero-chunk
-   #:hash-concat
    #:merkleize-with-limit
    #:next-pow-of-two
    #:log2-ceil
-   #:zero-hash
    #:pack-bits
    #:chunk-count-bitvector
    #:chunk-count-vector-basic
